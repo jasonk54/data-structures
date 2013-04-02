@@ -17,4 +17,12 @@ describe("stack", function() {
       expect(stack.size()).toEqual(1);
     });
   });
+
+  describe('remove', function(){
+    it('should remove an item from the stack', function(){
+      stack.add('hello');
+      stack.remove();
+      expect(stack.size()).toEqual(0);
+    });
+  });
 });

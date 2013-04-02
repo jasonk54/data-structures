@@ -30,4 +30,10 @@ describe("stack", function() {
       expect(stack.remove()).toEqual(undefined);
     });
   });
+
+  it('should remove the first item', function(){
+    stack.add('hello');
+    stack.add('greetings');
+    expect(stack.remove()).toEqual('greetings');
+  });
 });

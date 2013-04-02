@@ -7,13 +7,12 @@ var makeStack = function(){
   // fill out these methods
   stack.add = function(ele){
     size++;
-    storage.size = ele;
+    storage[size] = ele;
   };
-
   stack.remove = function(){
     if (size > 0) {
-      var temp = storage.size;
-      delete storage.size;
+      var temp = storage[size];
+      delete storage[size];
       size--;
       return temp;
     }

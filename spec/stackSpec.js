@@ -14,7 +14,8 @@ describe("stack", function() {
   describe("add", function(){
     it('should add a new item into the stack', function(){
       stack.add('hello');
-      expect(stack.size()).toEqual(1);
+      stack.add('greetings');
+      expect(stack.size()).toEqual(2);
     });
   });
 
@@ -35,5 +36,7 @@ describe("stack", function() {
     stack.add('hello');
     stack.add('greetings');
     expect(stack.remove()).toEqual('greetings');
+    expect(stack.remove()).toEqual('hello');
+    expect(stack.remove()).toEqual(undefined);
   });
 });

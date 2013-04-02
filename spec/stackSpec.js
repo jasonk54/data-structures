@@ -23,6 +23,11 @@ describe("stack", function() {
       stack.add('hello');
       stack.remove();
       expect(stack.size()).toEqual(0);
+      expect(stack.remove()).toEqual(undefined);
+    });
+
+    it('should work right if it\'s empty', function(){
+      expect(stack.remove()).toEqual(undefined);
     });
   });
 });

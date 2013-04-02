@@ -2,7 +2,7 @@ describe("stack", function() {
   var stack;
 
   beforeEach(function() {
-    stack = makeStack();
+    stack = makeQueue();
   });
 
   it('should have "add", "remove", and "size" methods', function() {
@@ -35,6 +35,8 @@ describe("stack", function() {
   it('should remove the first item', function(){
     stack.add('hello');
     stack.add('greetings');
+    stack.add('bye');
+    expect(stack.remove()).toEqual('bye');
     expect(stack.remove()).toEqual('greetings');
     expect(stack.remove()).toEqual('hello');
     expect(stack.remove()).toEqual(undefined);

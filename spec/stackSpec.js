@@ -11,5 +11,10 @@ describe("stack", function() {
     expect(stack.size).toEqual(jasmine.any(Function));
   });
 
-  // add more tests here to test the functionality of stack
+  describe("add", function(){
+    it('should add a new item into the stack', function(){
+      stack.add('hello');
+      expect(stack.size()).toEqual(1);
+    });
+  });
 });

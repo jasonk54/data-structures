@@ -1,15 +1,15 @@
-var makeQueue = function(){
+var makeQueue = function() {
   var queue = {};
   var storage = {};
   var size = 0;
   var counter = 0;
 
-  queue.add = function(ele){
+  queue.add = function(ele) {
     storage[size] = ele;
     size++;
   };
 
-  queue.remove = function(){
+  queue.remove = function() {
     if (size >= 0) {
       var temp = storage[counter];
       delete storage[counter];
@@ -18,7 +18,7 @@ var makeQueue = function(){
     }
   };
 
-  queue.size = function(){
+  queue.size = function() {
     return size - counter;
   };
 

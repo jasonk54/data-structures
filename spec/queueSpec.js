@@ -1,4 +1,4 @@
-describe("queue", function() {
+describe("queue1", function() {
   var queue;
 
   beforeEach(function() {
@@ -10,6 +10,7 @@ describe("queue", function() {
     expect(queue.remove).toEqual(jasmine.any(Function));
     expect(queue.size).toEqual(jasmine.any(Function));
   });
+
 
   it('should have "add", "remove", and "size" methods', function() {
     expect(queue.add).toEqual(jasmine.any(Function));

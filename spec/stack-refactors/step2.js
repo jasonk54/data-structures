@@ -1,8 +1,8 @@
-describe("stack 1", function() {
+describe("stack2", function() {
   var stack;
 
   beforeEach(function() {
-    stack = makeStack();
+    stack = makeStack2();
   });
 
   it('should have "add", "remove", and "size" methods', function() {

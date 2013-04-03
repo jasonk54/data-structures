@@ -1,31 +1,31 @@
-var makeQueue2 = function(){
+var makeQueue2 = function() {
   var queue = {};
-  var storage = {};
-  var size = 0;
-  var counter = 0;
+  queue._storage = {};
+  queue._size = 0;
+  queue._counter = 0;
 
-  return _.extend(queue, {
+  _.extend(queue, {
     add : add,
     remove : remove,
     size : size
   });
-
+  return queue;
 };
 
-var add = function(ele){
-  this.storage[this.size] = ele;
-  this.size++;
+var add = function(ele) {
+  this._storage[this._size] = ele;
+  this._size++;
 };
 
-var remove = function(){
-  if (this.size >= 0) {
-    var temp = this.storage[this.counter];
-    delete this.storage[this.counter];
-    this.counter++;
+var remove = function() {
+  if (this._size >= 0) {
+    var temp = this._storage[this._counter];
+    delete this._storage[this._counter];
+    this._counter++;
     return temp;
   }
 };
 
-var size = function(){
-  return this.size - this.counter;
+var size = function() {
+  return this._size - this._counter;
 };

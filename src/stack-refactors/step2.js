@@ -1,30 +1,31 @@
-var makeStack2 = function(){
-  var stack = {};
-  stack._storage = {};
-  stack._size = 0;
+(function(){
 
-  _.extend(stack, {
-    add : add,
-    remove : remove,
-    size: size
-  });
-  return stack;
-};
+  window.makeStack2 = function() {
+    var stack = {};
+    stack._storage = {};
+    stack._size = 0;
 
-var add = function(ele) {
-  this._size++;
-  this._storage[this._size] = ele;
-};
+    _.extend(stack, stackMethods);
+    return stack;
+  };
 
-var remove = function() {
-  if (this._size > 0) {
-    var temp = this._storage[this._size];
-    delete this._storage[this._size];
-    this._size--;
-    return temp;
-  }
-};
+  var stackMethods = {};
+  stackMethods.add = function(ele) {
+    this._size++;
+    this._storage[this._size] = ele;
+  };
 
-var size = function() {
-  return this._size;
-};
+  stackMethods.remove = function() {
+    if (this._size > 0) {
+      var temp = this._storage[this._size];
+      delete this._storage[this._size];
+      this._size--;
+      return temp;
+    }
+  };
+
+  stackMethods.size = function() {
+    return this._size;
+  };
+
+}());

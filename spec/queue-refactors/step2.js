@@ -11,13 +11,6 @@ describe("queue2", function() {
     expect(queue.size).toEqual(jasmine.any(Function));
   });
 
-
-  it('should have "add", "remove", and "size" methods', function() {
-    expect(queue.add).toEqual(jasmine.any(Function));
-    expect(queue.remove).toEqual(jasmine.any(Function));
-    expect(queue.size).toEqual(jasmine.any(Function));
-  });
-
   describe("add", function(){
     it('should add a new item into the queue', function(){
       queue.add('hello');
